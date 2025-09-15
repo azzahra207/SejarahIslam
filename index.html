@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejarah masuknya Islam ke indonesia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+<style>
+     ::-webkit-scrollbar{
+        display:none;
+    }
+        body{
+            background-image:url(image/coverAwal.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        body::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: inherit;      /* ambil background body */
+          filter: blur(5px);        /* efek blur */
+          z-index: -1;              /* letakkan di belakang konten */
+        }
+        body::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0, 0, 0, 0.7); /* warna hitam transparan */
+          z-index: -1;                    /* tetap di belakang konten */
+        }
+        nav{
+            background-color: #726413;
+            margin:0;
+        }
+        li {
+  list-style-type: none;
+}
+    .laman:hover{
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .titleUtama{
+        font-size:4vw;
+    }
+    .divUtama{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .teori{
+        width: 13%;
+    }
+    .teori:hover{
+        background-color: #726413 !important;
+        transition: 0.3s;
+        color: beige !important;
+    }
+    .teori:hover img{
+        transform: scale(0.9);
+    }
+    .swal-button{
+  background-color: #7e7c1e !important;
+}
+    .swal-button:hover{
+  background-color: #61601a !important;
+}
+.alertitle{
+    font-size:3vw;
+}
+    </style>
+</head>
+<body>
+    <nav class="sticky-top">
+        <ul class="py-3 d-flex justify-content-center gap-5">
+             <li class=""><a class="laman text-decoration-none text-light" href="latarbelakang.html">Latar Belakang</a></li>
+            <li class=""><a class="laman text-decoration-none text-light" href="saluran.html">Saluran Penyebaran</a></li>
+            <li class=""><a class="laman text-decoration-none text-light" href="wilayah.html">Kronologi</a></li>
+            <li class=""><a class="laman text-decoration-none text-light" href="tokoh.html">Tokoh Ulama</a></li>
+            <li class=""><a class="laman text-decoration-none text-light" href="index.html#kesimpulan">Dampak & Kesimpulan</a></li>
+        </ul>
+    </nav>
+    <header>
+        <div data-aos="fade-down" data-aos-duration="1000" class="divUtama card m-5 w-75 mx-auto p-4 rounded-5">
+            <h1 class="titleUtama text-center text-light fw-bold mb-3"><span class="fs-1">Sejarah Masuknya</span><br> Agama Islam ke Indonesia</h1>
+            <p class="text-center text-light">Oleh : Sidqiana Azzahra (25051204037)</p>
+        </div>
+        <div class="d-flex justify-content-center gap-3">
+            <div data-aos="zoom-in" data-aos-duration="1000" class="teori card border-2">
+                <button onclick="gujarat()">
+                <img class="rounded-2" style="height:200px;object-fit: cover;object-position: top;" src="image/tokoh gujarat.jpg" alt="">
+                <h3 class="text-center fw-bold p-3">Teori Gujarat</h3>
+                </button>
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="1000" class="teori card border-2">
+                <button onclick="arab()">
+                <img class="rounded-2" style="height:200px;object-fit: cover;object-position: top;" src="image/tokoh arab.jpg" alt="">
+                <h3 class="text-center fw-bold p-3">Teori Arab</h3>
+                </button>
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="1000" class="teori card border-2">
+                <button onclick="persia()">
+                <img class="rounded-2" style="height:200px;object-fit: cover;object-position: top;" src="image/tokoh persia.jpg" alt="">
+                <h3 class="text-center fw-bold p-3">Teori Persia</h3>
+                </button>
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="1000" class="teori card border-2">
+                <button onclick="cina()">
+                <img class="rounded-2 w-100" style="height:200px;object-fit: cover;object-position: top;" src="image/tokoh cina.webp" alt="">
+                <h3 class="text-center fw-bold p-3">Teori Cina</h3>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div id="kesimpulan" class="p-5 bg-dark">
+        <h1 class="text-light fw-bold text-center">Dampak dan Kesimpulan</h1>
+         <br><p class="text-light">Masuknya Islam ke Indonesia membawa dampak besar dalam berbagai bidang kehidupan masyarakat Nusantara. Dalam bidang agama, Islam berkembang pesat hingga menjadi agama mayoritas serta melahirkan tradisi keagamaan baru, seperti pesantren dan madrasah. Dalam bidang politik, lahirlah kerajaan-kerajaan Islam seperti Samudra Pasai, Demak, Aceh, Banten, hingga Ternate-Tidore yang menggantikan peran kerajaan Hindu-Buddha sebelumnya. Di bidang sosial budaya, ajaran Islam berpadu dengan tradisi lokal sehingga melahirkan kebudayaan baru, misalnya tradisi selametan, wayang bernuansa Islami, seni gamelan, arsitektur masjid, dan kaligrafi. Sementara itu, dalam bidang ekonomi, peran pedagang Muslim memperkuat jaringan perdagangan Nusantara hingga internasional, sehingga mendorong kemajuan ekonomi masyarakat. Di bidang pendidikan dan ilmu pengetahuan, Islam memunculkan pusat-pusat pendidikan seperti pesantren, serta melahirkan banyak ulama, cendekiawan, dan karya sastra sufistik.</p>
+         <br><p class="text-light"><strong>Kesimpulan: </strong>masuknya Islam ke Indonesia tidak hanya membawa perubahan dalam keyakinan masyarakat, tetapi juga berpengaruh besar pada politik, budaya, ekonomi, dan pendidikan. Islam diterima secara damai melalui perdagangan, dakwah ulama, dan akulturasi budaya, sehingga menjadikannya bagian penting dari identitas bangsa Indonesia hingga saat ini.</p>
+    </div>
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+<script>
+    AOS.init();
+    function gujarat() {
+        swal({
+        content: {
+            element: "div",
+            attributes: {
+                innerHTML: `
+                <h1 class="alertitle fw-bold mb-3">Teori Gujarat</h1>
+                <img class="w-50 d-block m-auto" src="image/tokoh gujarat.jpg">
+                <figure>J. Pijnapel</figure>
+                <p class="mt-3">
+                    Teori ini berpendapat bahwa Islam masuk ke Indonesia melalui para pedagang dari Gujarat, India, sekitar abad ke-13. Pendapat ini didukung dengan ditemukannya batu nisan Sultan Malik al-Saleh di Samudra Pasai yang memiliki kesamaan bentuk dengan nisan dari Gujarat. Selain itu, Gujarat pada masa itu menjadi pusat perdagangan internasional yang ramai sehingga sangat mungkin menjadi perantara penyebaran Islam ke Nusantara. Tokoh yang mendukung teori ini adalah Snouck Hurgronje.                  </p>
+                     `,
+            }
+        },
+        width: "900px", 
+        button: "Close"
+    });
+}
+    function arab() {
+        swal({
+        content: {
+            element: "div",
+            attributes: {
+                innerHTML: `
+                <h1 class="alertitle fw-bold mb-3">Teori Arab</h1>
+                <img class="w-50 d-block m-auto" src="image/tokoh arab.jpg">
+                <figure>Buya Hamka</figure>
+                <p class="mt-3">
+                Menurut teori ini, Islam datang langsung dari Arab sejak abad ke-7 melalui jalur perdagangan dan hubungan diplomatik. Bukti pendukungnya adalah adanya catatan sejarah yang menyebut perkampungan Muslim di pesisir Sumatra, serta kesamaan mazhab Syafi’i yang dianut baik di Makkah maupun di Indonesia. Dengan demikian, teori ini menekankan bahwa Islam tidak melalui perantara, melainkan disebarkan langsung oleh pedagang Arab. Tokoh pendukung teori ini adalah Buya Hamka.
+                     `,
+            }
+        },
+        width: "900px", 
+        button: "Close"
+    });
+  }
+    function persia() {
+        swal({
+        content: {
+            element: "div",
+            attributes: {
+                innerHTML: `
+                <h1 class="alertitle fw-bold mb-3">Teori Persia</h1>
+                <img class="w-50 d-block m-auto" src="image/tokoh persia.jpg">
+                <figure>Hoesein Djajadiningrat</figure>
+                <p class="mt-3">
+Teori Persia menyatakan bahwa Islam datang dari ulama dan pedagang Persia sekitar abad ke-13. Hal ini didukung oleh adanya tradisi Tabut di Sumatra Barat yang serupa dengan peringatan Asyura di Persia, serta kemiripan dalam seni kaligrafi dan budaya keagamaan. Teori ini menunjukkan adanya pengaruh Syiah dalam perkembangan awal Islam di Nusantara. Tokoh yang mendukung teori ini adalah Hoesein Djajadiningrat.                     `,
+            }
+        },
+        width: "900px", 
+        button: "Close"
+    });
+  }
+    function cina() {
+        swal({
+        content: {
+            element: "div",
+            attributes: {
+                innerHTML: `
+                <h1 class="alertitle fw-bold mb-3">Teori Cina</h1>
+                <img class="w-50 d-block m-auto" src="image/tokoh cina.webp">
+                <p class="mt-3">
+Teori ini berpendapat bahwa Islam disebarkan oleh komunitas Muslim dari Cina yang telah lama menjalin hubungan dagang dengan Nusantara. Hal ini terbukti dengan adanya perkampungan Cina Muslim di pesisir Jawa, serta beberapa wali yang diyakini memiliki garis keturunan atau hubungan dengan Tiongkok, seperti Sunan Ampel dan Sunan Gunung Jati. Dengan demikian, jalur penyebaran Islam ke Indonesia juga tidak terlepas dari peran pedagang dan ulama Muslim Cina.`,
+            }
+        },
+        width: "900px", 
+        button: "Close"
+    });
+  }
+    
+</script>
+</html>
